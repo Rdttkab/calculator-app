@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@700&display=swap');
+
+:root {
+ /* Colors */
+/*  Theme 1 */
+ /* Backgrounds
+   (main background)
+   (toggle background, keypad background)
+   (screen background) */
+
+--Very-dark-desaturated-blue-main: hsl(222, 26%, 31%);
+--Very-dark-desaturated-blue-keypad: hsl(223, 31%, 20%);
+--Very-dark-desaturated-blue-screen: hsl(224, 36%, 15%);
+
+ /* Keys 
+  (key background) 
+  (key shadow)
+  (key background, toggle)
+  (key shadow)
+  (key background)
+  (key shadow)*/
+
+--Desaturated-dark-blue: hsl(225, 21%, 49%);
+--Desaturated-dark-blue: hsl(224, 28%, 35%);
+
+--Red: hsl(6, 63%, 50%);
+--Dark-red: hsl(6, 70%, 34%);
+
+--Light-grayish-orange: hsl(30, 25%, 89%);
+--Grayish-orange: hsl(28, 16%, 65%);
+
+ /* Text */
+
+--Very-dark-grayish-blue-text: hsl(221, 14%, 31%);
+--White-text: hsl(0, 0, 100%);
+
+ /* Theme 2 */
+ /* Backgrounds 
+    (main background)
+    (toggle background, keypad background)
+    (screen background)*/
+
+--Light-gray: hsl(0, 0%, 90%);
+--Grayish-red: hsl(0, 5%, 81%);
+--Very-light-gray: hsl(0, 0%, 93%);
+
+ /* Keys
+    (key background) 
+    (key shadow)
+    (key background, toggle)
+    (key shadow)
+    (key background)
+    (key shadow)*/
+
+--Dark-moderate-cyan: hsl(185, 42%, 37%);
+--Very-dark-cyan: hsl(185, 58%, 25%);
+
+--Orange: hsl(25, 98%, 40%);
+--Dark-orange: hsl(25, 99%, 27%);
+
+--Light-grayish-yellow: hsl(45, 7%, 89%);
+--Dark-grayish-orange: hsl(35, 11%, 61%);
+
+/* Text 
+    (text) */
+
+--Very-dark-grayish-yellow: hsl(60, 10%, 19%);
+--White: hsl(0, 0, 100%);
+
+/* Theme 3 */
+/* Backgrounds 
+   (main background) 
+   (toggle background, keypad background, screen background)*/
+
+--Very-dark-violet: hsl(268, 75%, 9%);
+--Very-dark-violet: hsl(268, 71%, 12%);
+
+/* Keys 
+   (key background)
+   (key shadow)
+   (key background, toggle) 
+   (key shadow)
+   (key background) 
+   (key shadow) */
+
+--Dark-violet: hsl(281, 89%, 26%);
+--Vivid-magenta: hsl(285, 91%, 52%);
+
+--Pure-cyan: hsl(176, 100%, 44%);
+--Soft-cyan: hsl(177, 92%, 70%);
+
+--Very-dark-violet: hsl(268, 47%, 21%);
+--Dark-magenta: hsl(290, 70%, 36%);
+
+/* Text 
+   (text) */
+
+--Light-yellow: hsl(52, 100%, 62%);
+--Very-dark-blue: hsl(198, 20%, 13%);
+--White: hsl(0, 0, 100%);
+
+--radius: 10px;
+}
+
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-family: 'Spartan', sans-serif;
+  font-weight: 700;
+  width: 100%;
+  height: 100vh;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--Very-dark-desaturated-blue-main);
+  color: white;
+  height: 100vh;
+}
+
+input {
+  font: inherit;
+  color: white;
+  border: none;
+  outline: none;
+}
+
+.calc {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* width: 100%; */
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  margin: 20px;
+}
+
+.calc-display {
+ width: 100%;
+ margin-bottom: 20px;
+ font-size: 32px;
+}
+
+.calc-display input {
+  width: 100%;
+  background-color: var(--Very-dark-desaturated-blue-screen);
+  height: 126px;
+  border-radius: var(--radius);
+}
+
+.calc-input {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(5, auto);
+  grid-gap: 26px 22px;
+  width: 100%;
+  padding: 20px;
+  background-color:  var(--Very-dark-desaturated-blue-keypad);
+  border-radius: var(--radius);
+  font-size: 32px;
+}
+
+.calc-input input {
+  background-color: var(--Light-grayish-orange);
+  color: var(--Very-dark-grayish-blue-text);
+  border-radius: var(--radius);
+  text-align: center;
+  padding: 10px;
+}
+
+/* .calc-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.calc-button input {
+  flex-grow: 1;
+} */
