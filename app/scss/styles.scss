@@ -41,24 +41,68 @@ input {
     width: 100%;
     margin: 20px;
 
-    &__toggle {
-      display: flex;
-      justify-content: center;
-      align-items: flex-end;
+    .toggle {
+      border: none;
 
-      .toggle {
+      legend {
+        display: inline-block;
+      }
+
+      &__label {
         display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+        justify-content: space-around;
+        font-size: 10px;
+      }
 
-        &__wrapper {
-          order: 2;
+      &__wrapper {
+        height: 24px;
+        position: relative;
+      }
+
+      input[type="radio"] {
+        // margin: 0 -2px 0 -2px;
+        margin: 0;
+        opacity: 0;
+        width: 24px;
+        height: 24px;
+
+        &:hover {
+          cursor: pointer;
         }
 
-        &__label {
-          order: 1;
-        }
+      }
+
+      &__background {
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        background-color: var(--Very-dark-desaturated-blue-screen);
+        border-radius: 10px;
+        pointer-events: none;
+      }
+
+      &__button {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        right: 100%;
+        width: 18px;
+        height: 18px;
+        border-radius: 50%;
+        background-color: var(--Dark-red);
+      }
+
+      #theme-two:checked ~ .toggle__button {
+        left: 50%;
+        right: auto;
+        transform: translate(-50%);
+      }
+
+      #theme-three:checked ~ .toggle__button {
+        left: auto;
+        right: 2px;
       }
     }
   }
@@ -72,8 +116,11 @@ input {
 .calc-display input {
   width: 100%;
   background-color: var(--Very-dark-desaturated-blue-screen);
-  // height: 126px;
+  height: 82px;
   border-radius: var(--radius);
+  font-size: 32px;
+  // padding: 25px;
+  text-align: right;
 }
 
 .calc-input {
@@ -92,7 +139,8 @@ input {
   background-color: var(--Very-dark-desaturated-blue-keypad);
   border-radius: var(--radius);
 
-  .delete,.reset {
+  .delete,
+  .reset {
     background-color: var(--Desaturated-dark-blue);
     color: var(--White);
   }
@@ -104,7 +152,7 @@ input {
   .equal {
     grid-area: equal;
     background-color: var(--Red);
-    color: var(--White)
+    color: var(--White);
   }
 
   input {
@@ -112,6 +160,6 @@ input {
     color: var(--Very-dark-grayish-blue-text);
     border-radius: var(--radius);
     text-align: center;
-    padding: 10px;
+    // padding: 10px;
   }
 }
