@@ -21,7 +21,7 @@ body {
   overflow: hidden;
 }
 
-input {
+input, button {
   font: inherit;
   color: white;
   border: none;
@@ -69,7 +69,6 @@ input {
         &:hover {
           cursor: pointer;
         }
-
       }
 
       &__background {
@@ -147,19 +146,27 @@ input {
 
   .reset {
     grid-area: reset;
+
+    :hover {
+      cursor: pointer;
+    }
   }
 
   .equal {
     grid-area: equal;
     background-color: var(--Red);
     color: var(--White);
+
+    :hover {
+      cursor: pointer;
+    }
   }
 
-  input {
+  input, button {
     background-color: var(--Light-grayish-orange);
     color: var(--Very-dark-grayish-blue-text);
     border-radius: var(--radius);
     text-align: center;
-    // padding: 10px;
+    padding: 10px;
   }
 }

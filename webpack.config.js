@@ -14,13 +14,18 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.scss$/i,
+        test: /\.scss$/,
         use: ["style-loader", "css-loader", "sass-loader"],
       },
       {
-        test: /\.js$/i,
+        test: /\.js$/,
         exclude: /node_modules/,
-        use: ["babel-loader"],
+        use: {
+          loader: "babel-loader",
+          options: {
+            presets: [["@babel/preset-env", { targets: "defaults" }]],
+          },
+        },
       },
     ],
   },
